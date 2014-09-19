@@ -29,7 +29,7 @@ input[type='text']{border: 2px solid rgba(80,80,80,0.5)}
 input[type="submit"]{padding: inherit 2em;}
 form { margin-bottom: 1em}
 form > * { font-size: 130% }
-li img { border: 2px solid rgba(0,0,0,0.25); padding: 0.15em; margin-bottom: 1em }
+li img { padding: 0.2em; margin-bottom: 1em }
 #content {
   background: rgba(255,255,255,0.5);
   padding: 0.5em;
@@ -80,7 +80,7 @@ a,#copy{
   transition: opacity 1s linear;
 }
 ul { text-align: left }
-.vote { margin-top: 0.5em}
+.vote { margin-top: 1em}
 .vote a { color:#000; box-shadow: 0 0 1px 1px rgba(100,100,240,0.5);border-radius: 12px;
 background:url('subtle_grunge.png');display: inline-block; padding:0.5em 1em; margin:0 0.5em }
 .vote a:hover { background:white; color: black }
