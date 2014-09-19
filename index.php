@@ -145,6 +145,7 @@ var messages = [
   "turning on adblock on my site is like 301'ing to about:blank.",
   "my mobile stategy is to move around companies a lot and not fix things.",
   "A good day is a PBR, a MBP, and #BBB on #AAA.",
+  "On saturdays I like to sit at home and go through my collection of DNS records.",
   "I charge $100/hr for results that will lose you $50,000. guaranteed.",
   "Of course the site needs 30MB of dependencies. Why is this even a question?",
   "can't code so i call myself a ux engineer",
