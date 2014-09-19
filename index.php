@@ -11,8 +11,10 @@ function clean($str) {
 <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 <style>
-body{background:url('subtle_grunge.png');text-align:center}
-h1{font-family: 'Poiret One', cursive;color:#bbb;font-weight:normal;font-size:4em;margin-bottom:0.25em;}
+body{background:url('subtle_grunge.png');text-align:center;margin:0;padding:0}
+#header{font-family: 'Poiret One', cursive;color:#ccc;font-weight:normal;background:rgba(191,191,191,0.2);padding:1em}
+#header p {color:#aaa;font-size:1.15em}
+h1{font-weight:normal;font-size:4em;padding:0;margin:0}
 li {
   background: rgba(255,255,255,0.7);
   list-style: none;
@@ -43,8 +45,10 @@ li img { border: 2px solid rgba(0,0,0,0.25); padding: 0.15em; margin-bottom: 1em
 ul { text-align: left }
 #joke { border-radius: 12px }
 p { margin: 0.5em}
-</style>
+</style><div id=header>
 <h1>Low Contrast Offenders</h1>
+<p>who the hell can read this shit</p>
+</div>
 <div id='content'>
 <img id='joke' src='hipster.jpg'>
 <div id="copy">
