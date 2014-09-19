@@ -6,6 +6,8 @@ function clean($str) {
   return $str;
 }
 ?>
+<!doctype html>
+<title>The Worst Websites On The Whole Fucking Internet, in Pictures.</title>
 <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 <style>
