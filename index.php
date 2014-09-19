@@ -138,14 +138,15 @@ p { margin: 0.5em}
 var messages = [
   "i don't use any color with numbers in it. What is this? 2012?",
   "the only content i read is \"lorem ipsum dolor sit amet, consectetur adipiscing elit\"",
-  "i don't use computers. i type my css on postcards and mail it off to the datacenter",
+  "i don't use computers. i type my css on postcards and mail it off to the datacenter.",
   "i've taken javascript off my resume. it's coffescript all the way",
   "man that iphone is really ancient. what is it? like 2 months old?",
   "i have to stop coding now because i've sobered up.",
+  "turning on adblock on my site is like 301'ing to about:blank.",
   "my mobile stategy is to move around companies a lot and not fix things.",
   "A good day is a PBR, a MBP, and #BBB on #AAA.",
   "I charge $100/hr for results that will lose you $50,000. guaranteed.",
-  "Of course the site needs 32 MB of dependencies. Why is this even a question?",
+  "Of course the site needs 30MB of dependencies. Why is this even a question?",
   "can't code so i call myself a ux engineer",
   "look at me, im so cool. my sass generates less which generates lots of bugs.",
   "I use this font for irony even though it was designed for low resolution."
