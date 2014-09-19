@@ -45,22 +45,26 @@ a,#copy{
   src: url('comic-sans.ttf') format('truetype'),
     url('comic-sans.woff') format('woff');
 }
-#message { 
-  font-family:  "Comic Sans MS", "Comic Sans", cursive;
-  font-size: 13px;
+#message-container { 
+  vertical-align: top;
+  z-index: 40;
   display: inline-block;
   position: relative;
-  width: 155px;
+}
+#message {
+  position: absolute;
+  left: 148px;
+  top: 42px;
+  font-family:  "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 13px;
+  width: 153px;
   height: 78px;
   overflow: hidden;
-  left: -210px;
   text-align: left;
-  top: -57px;
 }
 #copy {
   font-size: 1.2em;
   display: inline-block;
-  margin-left: -158px;
   width: 30em;
   text-align: left;
   line-height: 1.5em;
@@ -81,15 +85,17 @@ ul { text-align: left }
 background:url('subtle_grunge.png');display: inline-block; padding:0.5em 1em; margin:0 0.5em }
 .vote a:hover { background:white; color: black }
 a.up { color: #55f;font-family: 'Poiret One', cursive}
-#joke { vertical-align: top; border-radius: 12px }
+#joke { padding:3px; border-radius: 16px;border: 1px solid rgba(0,0,0,100) }
 p { margin: 0.5em}
 </style><div id=header>
 <h1>Low Contrast Offenders</h1>
 <p>who the hell can read this shit</p>
 </div>
 <div id='content'>
-  <img id='joke' src='hipster.jpg'>
-  <div id="message"></div>
+  <div id='message-container'>
+    <img id='joke' src='hipster.jpg'>
+    <div id="message"></div>
+  </div>
   <div id="copy">
     <p>Some people have the cool-kid designer stick shoved so far up their ass that they forgot to make their content readable.</p>
     <p>This has gone on too long.</p>
