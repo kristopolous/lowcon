@@ -65,8 +65,9 @@ p { margin: 0.5em}
   $res = $db->query("select * from sites order by up limit 20");
 
   while( $row = $res->fetchArray() ) {
-    echo "<li><img src=img/" . md5($row['url']) . "_tn.jpg><br>";
-    echo "<a href=" . $row['url'] . ">" . clean($row['url']) . "</a>";
+    echo "<li>";
+    echo "<a target=_blank href=" . $row['url'] . "><img src=img/" . md5($row['url']) . "_tn.jpg></a><br>";
+    echo "<a target=_blank href=" . $row['url'] . ">" . clean($row['url']) . "</a>";
     echo "</li>";
   }
 ?>
