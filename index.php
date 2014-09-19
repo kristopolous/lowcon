@@ -20,13 +20,13 @@ li {
   list-style: none;
   text-align: center;
   padding: 1.25em;
-  margin: 0 1em;
+  margin: 1em;
   box-shadow: 0 0 3px 2px rgba(127,127,127,0.5);
   display: inline-block;
 }
 input{padding: 0.25em}
 input[type='text']{border: 2px solid rgba(80,80,80,0.5)}
-form { margin-bottom: 3em}
+form { margin-bottom: 1em}
 form > * { font-size: 130% }
 li img { border: 2px solid rgba(0,0,0,0.25); padding: 0.15em; margin-bottom: 1em }
 #content {
