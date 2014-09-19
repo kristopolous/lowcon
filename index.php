@@ -93,7 +93,7 @@ p { margin: 0.5em}
 </div>
 <div id='content'>
   <div id='message-container'>
-    <img id='joke' src='hipster.jpg'>
+    <img id='joke' src='hipster.png'>
     <div id="message"></div>
   </div>
   <div id="copy">
