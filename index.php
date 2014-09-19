@@ -48,6 +48,11 @@ a,#copy{
   line-height: 1.5em;
 }
 ul { text-align: left }
+.vote { margin-top: 0.5em}
+.vote a { color:#000; box-shadow: 0 0 1px 1px rgba(100,100,240,0.5);border-radius: 12px;
+background:url('subtle_grunge.png');display: inline-block; padding:0.5em 1em; margin:0 0.5em }
+.vote a:hover { background:white; color: black }
+a.up { color: #55f;font-family: 'Poiret One', cursive}
 #joke { vertical-align: top; border-radius: 12px }
 p { margin: 0.5em}
 </style><div id=header>
@@ -79,6 +84,10 @@ p { margin: 0.5em}
     echo "<li>";
     echo "<a target=_blank href=" . $row['url'] . "><img src=img/" . md5($row['url']) . "_tn.jpg></a><br>";
     echo "<a target=_blank href=" . $row['url'] . ">" . clean($row['title']) . "</a>";
+    echo "<div class=vote>";
+    echo "<a class=up href=vote.php?dir=up&id=" . $row['id'] .">+1 Unreadable</a>";
+    echo "<a class=down href=vote.php?dir=dn&id=" . $row['id'] .">-1 It's fine</a>";
+    echo "</div>";
     echo "</li>";
   }
 ?>
