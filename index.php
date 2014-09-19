@@ -40,12 +40,40 @@ a:hover { text-decoration: underline;color:blue }
 a,#copy{
   font-family: 'Droid Sans', sans-serif;
 }
+@font-face {
+  font-family: "Comic Sans";
+  src: url('comic-sans.ttf') format('truetype'),
+    url('comic-sans.woff') format('woff');
+}
+#message { 
+  font-family:  "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 13px;
+  display: inline-block;
+  position: relative;
+  width: 155px;
+  height: 78px;
+  overflow: hidden;
+  left: -210px;
+  text-align: left;
+  top: -55px;
+}
 #copy {
   font-size: 1.2em;
   display: inline-block;
+  margin-left: -158px;
   width: 30em;
   text-align: left;
   line-height: 1.5em;
+}
+.fadeout {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s linear;
+}
+.fadein {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s linear;
 }
 ul { text-align: left }
 .vote { margin-top: 0.5em}
@@ -61,11 +89,12 @@ p { margin: 0.5em}
 </div>
 <div id='content'>
   <img id='joke' src='hipster.jpg'>
+  <div id="message"></div>
   <div id="copy">
     <p>Some people have the cool-kid designer stick shoved so far up their ass that they forgot to make their content readable.</p>
-    <p>Fuck them. This has gone on too long.</p>
+    <p>This has gone on too long.</p>
     <p>Let's expose low-contrast impossible to read websites.</p>
-    <p>Screw those people. Really.</p>
+    <p>Here's a nickel kid. Get yourself a better website.</p>
   </div>
 </div>
 
@@ -92,3 +121,33 @@ p { margin: 0.5em}
   }
 ?>
 </ul>
+<script>
+var messages = [
+  "i don't use any color with numbers in it. What is this? 2012?",
+  "i don't use computers. i type my css on postcards and mail it off to the datacenter",
+  "i've taken javascript off my resume. it's coffescript all the way",
+  "my mobile stategy is to move around companies a lot and not fix things.",
+  "A good day is a PBR, a MBP, and #BBB on #AAA.",
+  "I charge $100/hr for results that will you lose $50,000. guaranteed.",
+  "Of course the site needs 32 MB of dependencies. Why is this even a question?",
+  "can't code so i call myself a ux engineer",
+  "look at me, im so cool. my sass generates less which generates lots of bugs.",
+  "I use this font for irony even though it was designed for low resolution."
+], ix = 0, iy = 7;
+
+setInterval(function(){
+  var m = document.getElementById('message');
+  if(iy == 6) { m.className = 'fadeout'; }
+  if(iy == 7) { 
+    m.innerHTML = messages[ix]; 
+    ix++;
+    ix %= messages.length;
+  }
+  if(iy == 8) { m.className = 'fadein'; }
+
+  iy ++;
+  iy %= 12;
+
+}, 1 * 1000);  
+
+</script>
