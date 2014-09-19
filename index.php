@@ -105,7 +105,7 @@ p { margin: 0.5em}
 </div>
 
 <form method='post' action="addoffender.php">
-  <input type='text' size=40 name="url" placeholder="ex: http://impossible-to-read-cool-kid-site.com">
+  <input type='text' size=40 name="url" placeholder="ex: http://impossible-to-read-cool-kid-site.ly">
   <input type="submit" value="Add Offender">
 </form>
 
