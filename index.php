@@ -140,6 +140,7 @@ var messages = [
   "the only content i read is \"lorem ipsum dolor sit amet, consectetur adipiscing elit\"",
   "i don't use computers. i type my css on postcards and mail it off to the datacenter",
   "i've taken javascript off my resume. it's coffescript all the way",
+  "man that iphone is really ancient. what is it? like 2 months old?",
   "i have to stop coding now because i've sobered up.",
   "my mobile stategy is to move around companies a lot and not fix things.",
   "A good day is a PBR, a MBP, and #BBB on #AAA.",
