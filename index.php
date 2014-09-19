@@ -132,6 +132,7 @@ var messages = [
   "i don't use any color with numbers in it. What is this? 2012?",
   "i don't use computers. i type my css on postcards and mail it off to the datacenter",
   "i've taken javascript off my resume. it's coffescript all the way",
+  "i have to stop coding now because i've sobered up.",
   "my mobile stategy is to move around companies a lot and not fix things.",
   "A good day is a PBR, a MBP, and #BBB on #AAA.",
   "I charge $100/hr for results that will lose you $50,000. guaranteed.",
