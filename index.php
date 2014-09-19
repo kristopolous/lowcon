@@ -1,7 +1,7 @@
 <?php
 function clean($str) {
-  if(strlen($str) > 35) {
-    return substr($str, 0, 35) . '&hellip;';
+  if(strlen($str) > 37) {
+    return substr($str, 0, 37) . '&hellip;';
   } 
   return $str;
 }
@@ -38,6 +38,7 @@ li img { border: 2px solid rgba(0,0,0,0.25); padding: 0.15em; margin-bottom: 1em
   text-align: left;
   line-height: 1.5em;
 }
+ul { text-align: left }
 #joke { border-radius: 12px }
 p { margin: 0.5em}
 </style>
