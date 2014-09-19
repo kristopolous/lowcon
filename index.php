@@ -145,6 +145,7 @@ var messages = [
   "turning on adblock on my site is like 301'ing to about:blank.",
   "we haven't gotten any complaints. i told you that feedback feature doesn't need to work.",
   "A good day is a PBR, a MBP, and #BBB on #AAA.",
+  "i utilize a process known as TDD; \"Takes Days n' Days\" to do shit.",
   "On saturdays I like to sit at home and go through my collection of DNS records.",
   "I charge $100/hr for results that will lose you $50,000. guaranteed.",
   "Of course the site needs 30MB of dependencies. Why is this even a question?",
