@@ -1,7 +1,7 @@
 <?php
 function clean($str) {
   if(strlen($str) > 37) {
-    return substr($str, 0, 37) . '&hellip;';
+    return substr($str, 0, 35) . '&hellip;';
   } 
   return $str;
 }
