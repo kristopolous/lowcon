@@ -6,7 +6,7 @@ $url = $db->escapeString($raw_url);
 $res = $db->query('select * from sites where url="' . $url . '"');
 $row = $res->fetchArray();
 
-if(true || !$row) {
+if(!$row) {
   $md5 = md5($url);
   $site = escapeshellarg($raw_url);
   exec('DISPLAY=:10 cutycapt --min-height=768 --min-width=1024 --url=' . $site . ' --out=img/' . $md5 . '.png');
