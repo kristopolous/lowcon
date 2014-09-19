@@ -30,6 +30,12 @@ input[type="submit"]{padding: inherit 2em;}
 form { margin-bottom: 1em}
 form > * { font-size: 130% }
 li img { padding: 0.2em; margin-bottom: 1em }
+#copyright {
+  margin-top: 2em;
+  padding-bottom: 0.5em;
+  font-size:0.75em;
+  opacity: 0.8;
+}
 #content {
   background: rgba(255,255,255,0.5);
   padding: 0.5em;
@@ -127,9 +133,11 @@ p { margin: 0.5em}
   }
 ?>
 </ul>
+<div id="copyright">&copy;2014 blahblahblah. bullshit bullshit bullshit. <a target=_blank href="https://github.com/kristopolous/lowcon">source code</a></div>
 <script>
 var messages = [
   "i don't use any color with numbers in it. What is this? 2012?",
+  "the only content i read is \"lorem ipsum dolor sit amet, consectetur adipiscing elit\"",
   "i don't use computers. i type my css on postcards and mail it off to the datacenter",
   "i've taken javascript off my resume. it's coffescript all the way",
   "i have to stop coding now because i've sobered up.",
