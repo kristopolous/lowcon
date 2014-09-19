@@ -10,7 +10,7 @@ if(true || !$row) {
   $md5 = md5($url);
   $site = escapeshellarg($raw_url);
   exec('DISPLAY=:10 cutycapt --min-height=768 --min-width=1024 --url=' . $site . ' --out=img/' . $md5 . '.png');
-  exec('convert img/' . $md5 . '.png -resize 300x -crop 300x450+0+0 -resize 300x img/' . $md5 . '_tn.jpg');
+  exec('convert img/' . $md5 . '.png -resize 300x -crop 300x320+0+0 -resize 300x img/' . $md5 . '_tn.jpg');
   $db->exec('
     insert into sites (url, up, down, view) 
     values("' . $url . '", 1, 0, 1)');
