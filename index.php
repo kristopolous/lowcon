@@ -21,6 +21,7 @@ li {
   display: inline-block;
 }
 input{padding: 0.25em}
+input[type='text']{border: 2px solid rgba(80,80,80,0.5)}
 form { margin-bottom: 3em}
 form > * { font-size: 130% }
 li img { border: 2px solid rgba(0,0,0,0.25); padding: 0.15em; margin-bottom: 1em }
@@ -47,12 +48,12 @@ p { margin: 0.5em}
 <p>Sometimes people have the cool-kid designer stick shoved sooo far up their ass that they forgot to make their content readable.</p>
 <p>Fuck them.</p>
 <p>This is where we expose shitty low-contrast impossible to read websites. </p>
-<p>Screw those poeple. Really.</p>
+<p>Screw those people. Really.</p>
 </div>
 </div>
 
 <form method='post' action="addoffender.php">
-  <input size=40 name="url">
+  <input type='text' size=40 name="url" placeholder="ex: http://impossible-to-read-cool-kid-site.com">
   <input type="submit" value="Add Offender">
 </form>
 
