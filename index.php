@@ -93,7 +93,7 @@ p { margin: 0.5em}
   <div id="copy">
     <p>Some people have the cool-kid designer stick shoved so far up their ass that they forgot to make their content readable.</p>
     <p>This has gone on too long.</p>
-    <p>Let's expose low-contrast impossible to read sites.</p>
+    <p>Let's expose low-contrast impossible to read sites on a giant wall of shame.</p>
     <p>Here's a nickel kid. Get yourself a better website.</p>
   </div>
 </div>
@@ -128,7 +128,7 @@ var messages = [
   "i've taken javascript off my resume. it's coffescript all the way",
   "my mobile stategy is to move around companies a lot and not fix things.",
   "A good day is a PBR, a MBP, and #BBB on #AAA.",
-  "I charge $100/hr for results that will you lose $50,000. guaranteed.",
+  "I charge $100/hr for results that will lose you $50,000. guaranteed.",
   "Of course the site needs 32 MB of dependencies. Why is this even a question?",
   "can't code so i call myself a ux engineer",
   "look at me, im so cool. my sass generates less which generates lots of bugs.",
