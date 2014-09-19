@@ -127,7 +127,7 @@ p { margin: 0.5em}
     echo "<a target=_blank href=" . $row['url'] . ">" . clean($row['title']) . "</a>";
     echo "<div class=vote>";
     echo "<a class=up href=vote.php?dir=up&id=" . $row['id'] .">+1 Unreadable</a>";
-    echo "<a class=down href=vote.php?dir=dn&id=" . $row['id'] .">-1 It's fine</a>";
+    echo "<a class=down href=vote.php?dir=down&id=" . $row['id'] .">-1 It's fine</a>";
     echo "</div>";
     echo "</li>";
   }
