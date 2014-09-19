@@ -55,7 +55,7 @@ a,#copy{
   overflow: hidden;
   left: -210px;
   text-align: left;
-  top: -55px;
+  top: -57px;
 }
 #copy {
   font-size: 1.2em;
