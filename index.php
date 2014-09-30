@@ -123,7 +123,7 @@ p { margin: 0.5em}
 <?php
 
   include('db.php');
-  $res = $db->query("select * from sites order by up - down limit 20");
+  $res = $db->query("select * from sites order by up - down desc limit 20");
 
   while( $row = $res->fetchArray() ) {
     echo "<li>";
