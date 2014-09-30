@@ -11,7 +11,8 @@ function clean($str) {
 <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 <style>
-body{background:url('subtle_grunge.png');text-align:center;margin:0;padding:0}
+body{text-align:center;margin:0;padding:0}
+#grey{background:url('subtle_grunge.png')}
 #header{font-family: 'Poiret One', cursive;color:#aaa;font-weight:normal;background:rgba(191,191,191,0.1);padding:1em}
 #header p {color:#aaa;font-size:1.15em}
 h1{font-weight:normal;font-size:4em;padding:0;margin:0}
@@ -28,7 +29,7 @@ input{padding: 0.25em}
 input[type='text']{border: 2px solid rgba(80,80,80,0.5)}
 input[type="submit"]{padding: inherit 2em;}
 form { margin-bottom: 1em}
-form > * { font-size: 130% }
+form > * { font-size: 140% }
 li img { padding: 0.2em; margin-bottom: 1em }
 #copyright {
   margin-top: 2em;
@@ -93,9 +94,11 @@ background:url('subtle_grunge.png');display: inline-block; padding:0.5em 1em; ma
 a.up { color: #55f;font-family: 'Poiret One', cursive}
 #joke { padding:3px; border-radius: 16px;border: 1px solid rgba(0,0,0,100) }
 p { margin: 0.5em}
-</style><div id=header>
-<h1>Low Contrast Offenders</h1>
-<p>who the hell can read this shit</p>
+</style>
+<div id='grey'>
+<div id=header>
+  <h1>Low Contrast Offenders</h1>
+  <p>who the hell can read this shit</p>
 </div>
 <div id='content'>
   <div id='message-container'>
@@ -109,6 +112,7 @@ p { margin: 0.5em}
     <p>Here's a nickel kid. Get yourself a better website.</p>
   </div>
 </div>
+</div>
 
 <form method='post' action="addoffender.php">
   <input type='text' size=40 name="url" placeholder="ex: http://impossible-to-read-cool-kid-site.ly">
@@ -119,7 +123,7 @@ p { margin: 0.5em}
 <?php
 
   include('db.php');
-  $res = $db->query("select * from sites where up - down > 0 order by up - down limit 20");
+  $res = $db->query("select * from sites order by up - down limit 20");
 
   while( $row = $res->fetchArray() ) {
     echo "<li>";
