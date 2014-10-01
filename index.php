@@ -123,7 +123,7 @@ p { margin: 0.5em}
 <?php
 
   include('db.php');
-  $res = $db->query("select * from sites order by up - down limit 20");
+  $res = $db->query("select * from sites order by up - down desc limit 20");
 
   while( $row = $res->fetchArray() ) {
     echo "<li>";
@@ -143,6 +143,7 @@ var messages = [
   "i don't use any color with numbers in it. What is this? 2012?",
   "the only content i read is \"lorem ipsum dolor sit amet, consectetur adipiscing elit\"",
   "i don't use computers. i type my css on postcards and mail it off to the datacenter.",
+  "the bike i came in is the last thing you'll see that's fixed for the next 2 hours.",
   "i've taken javascript off my resume. it's coffescript all the way",
   "man that iphone is really ancient. what is it? like 2 months old?",
   "i have to stop coding now because i've sobered up.",
