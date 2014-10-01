@@ -12,6 +12,7 @@ function clean($str) {
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 <style>
 body{text-align:center;margin:0;padding:0}
+#fuck{position:absolute;top:0;right:0}
 #grey{background:url('subtle_grunge.png')}
 #header{font-family: 'Poiret One', cursive;color:#aaa;font-weight:normal;background:rgba(191,191,191,0.1);padding:1em}
 #header p {color:#aaa;font-size:1.15em}
@@ -138,6 +139,7 @@ p { margin: 0.5em}
 ?>
 </ul>
 <div id="copyright">&copy;2014 blahblahblah. bullshit bullshit bullshit. <a target=_blank href="https://github.com/kristopolous/lowcon">source code</a></div>
+<div id="fuck"><a href="https://github.com/kristopolous/lowcon" title="Oh yeah baby, come and git it"><img src="fork.gif"></a></div>
 <script>
 var messages = [
   "i don't use any color with numbers in it. What is this? 2012?",
