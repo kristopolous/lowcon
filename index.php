@@ -144,6 +144,7 @@ p { margin: 0.5em}
 var messages = [
   "i don't use any color with numbers in it. What is this? 2012?",
   "the only content i read is \"lorem ipsum dolor sit amet, consectetur adipiscing elit\"",
+  "i'm a c programmer - except in the classes i got d's in.",
   "i don't use computers. i type my css on postcards and mail it off to the datacenter.",
   "the bike i came in is the last thing you'll see that's fixed for the next 2 hours.",
   "i've taken javascript off my resume. it's coffescript all the way",
