@@ -1,0 +1,46 @@
+<h3>So you want to make readable websites?</h3>
+<p>Luckily this process is easy!</p>
+
+<h4>1. Stop using grey text.</h4>
+<p>Some people think that grey text looks closer to print. Although they may be correct, print doesn't have a backlight or a shiny glare,</p>
+<p>Trying to make light emitted from an array of IPS LEDs abstractly mock dyed paper to increase legibility is a complete joke.  If you do this, you
+are a moron. It doesn't work.</p>
+
+<h4>2. Not everyone is using your computer.</h4>
+<p>There are a wide variety of displays these days used in a wide variety of lighting conditions.  People have varying degrees of dyslexia which mean that reading
+for some requires much greater concentration than reading for others.</p>
+<p>The problem is that if a bunch of concentration is exhausted to interpret the hairline grey flicks you call letters, then there's not much left to be spent on trying to understand what the fuck you've written with it.</p>
+
+<h4>3. Not everyone is using your operating system.</h4>
+<p>Sub-pixel font aliasing engines differ for each browser and platform.  Things that look good in one combination may look terrible in all others.  This goes back to the most basic fundamental rule of making webpages:</p>
+<blockquote>Test your stuff on other browsers.</blockquote>
+<p>And I don't mean through browser stack or any of your fancy hipster tools. I mean on separate physical devices. Read the text, see if it's hard. If it is, change it.</p>
+
+<h4>4. Not everyone is a spruced fresh face 19 year old</h4>
+<p>Some people (like me) have been doing this for 20 years.  I can read most things just fine.  I read a lot.  But these sites a completely whacked out pieces of shit. Why do I have to install a browser plug-in and override CSS to be able to get through the paragraphs of text? This is absurd. Fuck this. I can't learn this technology because it's too hard to read the descriptions without a fucking magnifying glass and screen-reading wand.</p>
+
+<h4>5. Color profiles differ and matter, duh.</h4>
+<p>Take any two random devices.  Put your grey-on-grey text website up against it.  Look at the two devices.  See how the greys are strikingly different?  One of them is bluer, or greener, or lighter, or darker.  The contrast ratio between the black and white are different?</p>
+<p>There's no agreed metric for contrast ratio amongst vendors.  The 10,000:1 numbers are only good within the vendor itself.  Furthermore, if the blacks are too bright, then this diffuses the focus for the reader.  I could cite things for you, but use google, really man, I'm not going to do all the legwork.</p>
+
+<h3>6. Legibility is your top goal for content. Period. End of story.</h3>
+<p>So we have the following realities.</p>
+<ul>
+  <li>You can't honestly compare light emitting displays to light reflecting paper - the same rules don't apply.</li>
+  <li>If the design demands concentration to interpret the letters, you've taken attention away from your message.</li>
+  <li>Fonts (especially thin ones) render very differently depending on the font subsystem used.</li>
+  <li>The vision abilities of people as young as 30 vary dramatically different from 20. Accomodations are for the majority</li>
+  <li>Not all #EEE are created equally and are a function of the display technology, color profile, operating system, and rendering subsystem.</li>
+</ul>
+
+<p>As a result, you should fall back to the highest contrast possible, leaving the most room to accomodate for this differences.</p>
+<p>Presuming that you will account for all of them through extensive testing is a stupid assumption.  Instead, make sure the </p>
+<ul>
+  <li>Color differences are stark
+  <li>Letters are spaced with sufficient kerning.
+  <li>Fonts are selected primary on the distinction amongst letters (l, 1, i - etc)
+</ul>
+
+<p>You will have more users better able to focus on your message without being distracted by your medium.</p>
+
+<h4>All This should have been obvious. See how easy this is to read without a style-sheet? It's already done for you.</h4>

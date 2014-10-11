@@ -110,7 +110,7 @@ p { margin: 0.5em}
     <p>Some people have the cool-kid designer stick shoved so far up their ass that they forgot to make their content readable.</p>
     <p>This has gone on too long.</p>
     <p>Let's expose low-contrast impossible to read sites.</p>
-    <p>Here's a nickel kid. Get yourself a better website.</p>
+    <p>Here's a nickel kid. Get <a href="guide.html">yourself a better website</a>.</p>
   </div>
 </div>
 </div>
