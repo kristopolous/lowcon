@@ -1,4 +1,6 @@
 <?php
+$isAdmin = isset($_GET['admin']);
+
 function clean($str) {
   if(strlen($str) > 37) {
     return substr($str, 0, 35) . '&hellip;';
@@ -133,6 +135,9 @@ p { margin: 0.5em}
     echo "<div class=vote>";
     echo "<a class=up href=vote.php?dir=up&id=" . $row['id'] .">+1 Unreadable</a>";
     echo "<a class=down href=vote.php?dir=down&id=" . $row['id'] .">-1 It's fine</a>";
+    if($isAdmin) {
+      echo "<a href=drop.php?id=" . $row['id'] .">X</a>";
+    }
     echo "</div>";
     echo "</li>";
   }
