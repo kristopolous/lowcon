@@ -25,12 +25,23 @@ function get_title($url) {
   // use the title as the name
   $titleList = $doc->getElementsByTagName("title");
   foreach($titleList as $title) {
-    $name = $title->nodeValue;
+    $name = iconv('UTF-8', 'ASCII//TRANSLIT', $title->nodeValue);
   }
   return trim($name);
 }
 
 $raw_url = $_POST['url'];
+
+if(empty($raw_url)) {
+  echo "Hey dipshit, you need to enter stuff into that box. What the hell is wrong with you?";
+  exit(0);
+}
+
+if(strpos(strtolower($raw_url), 'http') === false) {
+  // if we omitted the protocol reference this is fine.
+  $raw_url = 'http://' . $raw_url;
+}
+
 $url = $db->escapeString($raw_url);
 $res = $db->query('select * from sites where url="' . $url . '"');
 $row = $res->fetchArray();
