@@ -7,4 +7,6 @@ if($id > 0 && in_array($dir, array('up', 'down'))) {
   $db->exec("update sites set $dir = $dir + 1 where id = $id"); 
 }
 
-header('Location: ' . $_SERVER['HTTP_REFERER']);
+if(isset($_SERVER['HTTP_REFERER'])) {
+  header('Location: ' . $_SERVER['HTTP_REFERER']);
+}
