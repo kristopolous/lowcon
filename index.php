@@ -12,15 +12,21 @@ function clean($str) {
 <title>The Worst Websites On The Whole Fucking Internet, in Pictures.</title>
 <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 <style>
 body{text-align:center;margin:0;padding:0}
 .score {
-  background: gold;
+  background: rgba(192,192,192,0.9);
+  font-family: 'Lobster', cursive;
   color: white;
   display: inline-block;
   width: 1em;
   height: 1em;
   padding: 0.5em;
+  color: rgb(255, 243, 177);
+  text-shadow: 0 0 2px rgb(255, 87, 0);
+  box-shadow: inset 0 0 2px 2px rgba(10,0,0,0.35);
+  border-radius: 8px;
   font-size: 125%;
 }
 #fuck{position:absolute;top:0;right:0}
