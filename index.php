@@ -14,6 +14,15 @@ function clean($str) {
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 <style>
 body{text-align:center;margin:0;padding:0}
+.score {
+  background: gold;
+  color: white;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  padding: 0.5em;
+  font-size: 125%;
+}
 #fuck{position:absolute;top:0;right:0}
 #grey{background:url('subtle_grunge.png')}
 #header{font-family: 'Poiret One', cursive;color:#aaa;font-weight:normal;background:rgba(191,191,191,0.1);padding:1em}
@@ -130,6 +139,7 @@ p { margin: 0.5em}
 
   while( $row = $res->fetchArray() ) {
     echo "<li>";
+    echo "<span class=score>" . ($row['up'] - $row['down']) . "</span>";
     echo "<a target=_blank href=" . $row['url'] . "><img src=img/" . md5($row['url']) . "_tn.jpg></a><br>";
     echo "<a target=_blank href=" . $row['url'] . ">" . clean($row['title']) . "</a>";
     echo "<div class=vote>";
