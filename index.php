@@ -18,11 +18,18 @@ body{text-align:center;margin:0;padding:0}
 .score {
   font-family: 'Lobster', cursive;
   color: white;
-  display: inline-block;
-  padding: 0.5em;
+  position: absolute;
+  top: -.95em;
+  left: -1.5em;
+  padding: 1em 2.5em 0.25em 1.5em;
   color: rgb(0,0,0);
-  border-radius: 8px;
-  font-size: 125%;
+  background: rgba(235,230,235,0.8);
+    -ms-transform: rotate(-40deg); /* IE 9 */
+    -webkit-transform: rotate(-40deg); /* Safari */
+    transform: rotate(-40deg);
+  text-shadow: 0 0 4px rgba(225,225,255,0.8);
+  box-shadow: inset 0 0 4px 4px rgba(250,250,250,0.5);
+  font-size: 150%;
 }
 .score small { font-size: 80%; display:inline-block; font-weight: normal; opacity: 0.8} 
 #fuck{position:absolute;top:0;right:0}
@@ -31,10 +38,12 @@ body{text-align:center;margin:0;padding:0}
 #header p {color:#aaa;font-size:1.15em}
 h1{font-weight:normal;font-size:4em;padding:0;margin:0}
 li {
+  overflow: hidden;
+  position: relative;
   background: rgba(255,255,255,0.7);
   list-style: none;
   text-align: center;
-  padding: 1.25em;
+  padding: 1.25em 0.75em;
   margin: 1em;
   box-shadow: 0 0 3px 2px rgba(127,127,127,0.5);
   display: inline-block;
@@ -102,8 +111,15 @@ a,#copy{
 }
 ul { text-align: left }
 .vote { margin-top: 1em}
-.vote a { color:#000; box-shadow: 0 0 1px 1px rgba(100,100,240,0.5);border-radius: 12px;
-background:url('subtle_grunge.png');display: inline-block; padding:0.5em 1em; margin:0 0.5em }
+.vote a { 
+  color:#000; 
+  box-shadow: 1px 1px 2px 0px silver;
+  border: 1px solid rgba(64,64,94,0.2);
+  background:url('subtle_grunge.png');
+  display: inline-block; 
+  padding:0.5em 1em; 
+  margin:0 0.5em 
+}
 .vote a:hover { background:white; color: black }
 a.up { color: #55f;font-family: 'Poiret One', cursive}
 #joke { padding:3px; border-radius: 16px;border: 1px solid rgba(0,0,0,100) }
@@ -140,13 +156,14 @@ p { margin: 0.5em}
   $res = $db->query("select * from sites where up - down > -5 order by up - down desc limit 50");
 
   while( $row = $res->fetchArray() ) {
+    $score = ($row['up'] - $row['down']);
     echo "<li>";
+    echo "<span style=color:rgba(0,0,0," . ( (100 - $score) / 100) ."); class=score>" . $score . " <small>pts</small></span>";
     echo "<a name=item" . $row['id'] . " target=_blank href=" . $row['url'] . "><img src=img/" . md5($row['url']) . "_tn.jpg></a><br>";
     echo "<a target=_blank href=" . $row['url'] . ">" . clean($row['title']) . "</a>";
     echo "<div class=vote>";
     echo "<a class=up href=vote.php?dir=up&id=" . $row['id'] .">+1 Unreadable</a>";
     echo "<a class=down href=vote.php?dir=down&id=" . $row['id'] .">-1 It's fine</a>";
-    echo "<span class=score>" . ($row['up'] - $row['down']) . " <small>pts</small></span>";
     if($isAdmin) {
       echo "<a href=drop.php?id=" . $row['id'] .">X</a>";
     }
