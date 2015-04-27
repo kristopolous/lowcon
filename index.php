@@ -120,8 +120,11 @@ ul { text-align: left }
   padding:0.5em 1em; 
   margin:0 0.5em 
 }
-.vote a:hover { background:white; color: black }
-a.up { color: #55f;font-family: 'Poiret One', cursive}
+.vote a:hover { text-decoration: none }
+a.up:hover {color: #44a; text-decoration: underline;}
+a.down:hover { background: rgba(120,120,255,1); color: white}
+a.up { color: #779;font-family: 'Poiret One', cursive}
+a.down { background: #f4f4f4;color:#008}
 #joke { padding:3px; border-radius: 16px;border: 1px solid rgba(0,0,0,100) }
 p { margin: 0.5em}
 </style>
