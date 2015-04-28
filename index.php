@@ -2,8 +2,8 @@
 $isAdmin = isset($_GET['admin']);
 
 function clean($str) {
-  if(strlen($str) > 37) {
-    return substr($str, 0, 35) . '&hellip;';
+  if(strlen($str) > 77) {
+    return substr($str, 0, 75) . '&hellip;';
   } 
   return $str;
 }
@@ -36,6 +36,13 @@ body{text-align:center;margin:0;padding:0}
 #grey{background:url('subtle_grunge.png')}
 #header{font-family: 'Poiret One', cursive;color:#aaa;font-weight:normal;background:rgba(191,191,191,0.1);padding:1em}
 #header p {color:#aaa;font-size:1.15em}
+.title { 
+border-top: 1px solid rgba(192,192,192,0.6);
+padding: 0.75em 5px 1em;
+line-height:1.5em;
+
+text-align: left;color: #444;display: block;font-size:11px; width: 290px }
+.title a { font-size: 14px; display: block; padding-bottom:0.15em }
 h1{font-weight:normal;font-size:4em;padding:0;margin:0}
 li {
   overflow: hidden;
@@ -43,7 +50,7 @@ li {
   background: rgba(255,255,255,0.7);
   list-style: none;
   text-align: center;
-  padding: 1.25em 0.75em;
+  padding: 1.25em 0.75em 1em 0.75em;
   margin: 1em;
   box-shadow: 0 0 3px 2px rgba(127,127,127,0.5);
   display: inline-block;
@@ -110,7 +117,9 @@ a,#copy{
   transition: opacity 1s linear;
 }
 ul { text-align: left }
-.vote { margin-top: 1em}
+.vote { margin-top: 1em;
+  text-align: right;
+}
 .vote a { 
   color:#000; 
   box-shadow: 1px 1px 2px 0px silver;
@@ -162,11 +171,11 @@ p { margin: 0.5em}
     $score = ($row['up'] - $row['down']);
     echo "<li>";
     echo "<span style=color:rgba(0,0,0," . ( (100 - $score) / 100) ."); class=score>" . $score . " <small>pts</small></span>";
-    echo "<a name=item" . $row['id'] . " target=_blank href=" . $row['url'] . "><img src=img/" . md5($row['url']) . "_tn.jpg></a><br>";
-    echo "<a target=_blank href=" . $row['url'] . ">" . clean($row['title']) . "</a>";
+    echo "<a name=item" . $row['id'] . " target=_blank href=" . $row['url'] . "><img src=img/" . md5($row['url']) . "_tn.jpg></a>";
+    echo "<span class=title><a target=_blank href=" . $row['url'] . ">" . clean($row['title']) . "</a>" . $row['url'] . "</span>";
     echo "<div class=vote>";
-    echo "<a class=up href=vote.php?dir=up&id=" . $row['id'] .">+1 Unreadable</a>";
     echo "<a class=down href=vote.php?dir=down&id=" . $row['id'] .">-1 It's fine</a>";
+    echo "<a class=up href=vote.php?dir=up&id=" . $row['id'] .">+1 Unreadable</a>";
     if($isAdmin) {
       echo "<a href=drop.php?id=" . $row['id'] .">X</a>";
     }
