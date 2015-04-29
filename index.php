@@ -120,7 +120,7 @@ p { margin: 0.5em}
     <div id="message"></div>
   </div>
   <div id="copy">
-    <p>Many sites use colors which make their content quite difficult to read on a variety of devices.</p>
+    <p>Many sites use colors and ridiculously skinny fonts which make their content quite difficult to read on a variety of devices.</p>
     <p>This has gone on too long.</p>
     <p>Expose low-contrast impossible to read sites.</p>
     <p>Here's a nickel kid. Get <a href="guide.html">yourself a better website</a>.</p>
@@ -137,7 +137,7 @@ p { margin: 0.5em}
 <?php
 
   include('db.php');
-  $res = $db->query("select * from sites order by up - down desc limit 20");
+  $res = $db->query("select * from sites where up - down > -5 order by up - down desc limit 50");
 
   while( $row = $res->fetchArray() ) {
     echo "<li>";
