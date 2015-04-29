@@ -141,7 +141,7 @@ p { margin: 0.5em}
 
   while( $row = $res->fetchArray() ) {
     echo "<li>";
-    echo "<a target=_blank href=" . $row['url'] . "><img src=img/" . md5($row['url']) . "_tn.jpg></a><br>";
+    echo "<a name=item" . $row['id'] . " target=_blank href=" . $row['url'] . "><img src=img/" . md5($row['url']) . "_tn.jpg></a><br>";
     echo "<a target=_blank href=" . $row['url'] . ">" . clean($row['title']) . "</a>";
     echo "<div class=vote>";
     echo "<a class=up href=vote.php?dir=up&id=" . $row['id'] .">+1 Unreadable</a>";

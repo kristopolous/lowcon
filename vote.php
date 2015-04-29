@@ -8,5 +8,5 @@ if($id > 0 && in_array($dir, array('up', 'down'))) {
 }
 
 if(isset($_SERVER['HTTP_REFERER'])) {
-  header('Location: ' . $_SERVER['HTTP_REFERER']);
+  header('Location: ' . $_SERVER['HTTP_REFERER'] . "#item" . $id);
 }
