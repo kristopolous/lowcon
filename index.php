@@ -16,19 +16,15 @@ function clean($str) {
 <style>
 body{text-align:center;margin:0;padding:0}
 .score {
-  background: rgba(192,192,192,0.9);
   font-family: 'Lobster', cursive;
   color: white;
   display: inline-block;
-  width: 1em;
-  height: 1em;
   padding: 0.5em;
-  color: rgb(255, 243, 177);
-  text-shadow: 0 0 2px rgb(255, 87, 0);
-  box-shadow: inset 0 0 2px 2px rgba(10,0,0,0.35);
+  color: rgb(0,0,0);
   border-radius: 8px;
   font-size: 125%;
 }
+.score small { font-size: 80%; display:inline-block; font-weight: normal; opacity: 0.8} 
 #fuck{position:absolute;top:0;right:0}
 #grey{background:url('subtle_grunge.png')}
 #header{font-family: 'Poiret One', cursive;color:#aaa;font-weight:normal;background:rgba(191,191,191,0.1);padding:1em}
@@ -145,12 +141,12 @@ p { margin: 0.5em}
 
   while( $row = $res->fetchArray() ) {
     echo "<li>";
-    echo "<span class=score>" . ($row['up'] - $row['down']) . "</span>";
     echo "<a target=_blank href=" . $row['url'] . "><img src=img/" . md5($row['url']) . "_tn.jpg></a><br>";
     echo "<a target=_blank href=" . $row['url'] . ">" . clean($row['title']) . "</a>";
     echo "<div class=vote>";
     echo "<a class=up href=vote.php?dir=up&id=" . $row['id'] .">+1 Unreadable</a>";
     echo "<a class=down href=vote.php?dir=down&id=" . $row['id'] .">-1 It's fine</a>";
+    echo "<span class=score>" . ($row['up'] - $row['down']) . " <small>pts</small></span>";
     if($isAdmin) {
       echo "<a href=drop.php?id=" . $row['id'] .">X</a>";
     }
