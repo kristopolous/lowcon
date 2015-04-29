@@ -182,11 +182,11 @@ p { margin: 0.5em}
     $score = ($row['up'] - $row['down']);
     echo "<li><a class=bmark name=item" . $row['id'] ." />.</a>";
     echo "<span style=color:rgba(0,0,0," . ( (100 - $score) / 100) ."); class=score>" . $score . " <small>pts</small></span>";
-    echo "<a target=_blank href=" . $row['url'] . "><img src=img/" . md5($row['url']) . "_tn.jpg></a>";
-    echo "<span class=title><a target=_blank href=" . $row['url'] . ">" . clean($row['title']) . "</a><span class=url>" . $row['url'] . "</span></span>";
+    echo "<a target=_blank href='" . $row['url'] . "'><img src=img/" . md5($row['url']) . "_tn.jpg></a>";
+    echo "<span class=title><a target=_blank href='" . $row['url'] . "'>" . clean($row['title']) . "</a><span class=url>" . $row['url'] . "</span></span>";
     echo "<div class=vote>";
-    echo "<a class=down href=vote.php?dir=down&id=" . $row['id'] .">-1 It's fine</a>";
-    echo "<a class=up href=vote.php?dir=up&id=" . $row['id'] .">+1 Unreadable</a>";
+    echo "<a class=down href='vote.php?dir=down&id=" . $row['id'] ."'>-1 It's fine</a>";
+    echo "<a class=up href='vote.php?dir=up&id=" . $row['id'] ."'>+1 Unreadable</a>";
     if($isAdmin) {
       echo "<a href=drop.php?id=" . $row['id'] .">X</a>";
     }
@@ -195,7 +195,7 @@ p { margin: 0.5em}
   }
 ?>
 </ul>
-<div id="copyright">&copy;2014 blahblahblah. bullshit bullshit bullshit. <a target=_blank href="https://github.com/kristopolous/lowcon">source code</a></div>
+<div id="copyright">&copy;2014,2015,2016...9999 blahblahblah. bullshit bullshit bullshit. <a target=_blank href="https://github.com/kristopolous/lowcon">source code</a></div>
 <div id="fuck"><a href="https://github.com/kristopolous/lowcon" title="Oh yeah baby, come and git it"><img src="fork.gif"></a></div>
 <script>
 var messages = [
