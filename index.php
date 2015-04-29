@@ -62,7 +62,8 @@ li {
   text-align: center;
   padding: 1.25em 0.75em 1em 0.75em;
   margin: 1em;
-  box-shadow: 0 0 3px 2px rgba(127,127,127,0.5);
+  border: 1px solid rgba(192,192,192,0.7);
+  box-shadow: 0 0 2px 1px rgba(192,192,192,0.5);
   display: inline-block;
 }
 input{padding: 0.25em}
