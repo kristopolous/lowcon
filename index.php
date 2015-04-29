@@ -15,6 +15,11 @@ function clean($str) {
 <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 <style>
 body{text-align:center;margin:0;padding:0}
+.bmark {
+  position:absolute;
+  top: -40px;
+  display: block;
+}
 .score {
   font-family: 'Lobster', cursive;
   color: white;
@@ -50,8 +55,8 @@ height: 18px; overflow: hidden;
 font-size: 14px; display: block; padding-bottom:0em;margin-bottom:0.15em; }
 h1{font-weight:normal;font-size:4em;padding:0;margin:0}
 li {
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
   background: rgba(255,255,255,0.7);
   list-style: none;
   text-align: center;
@@ -174,9 +179,9 @@ p { margin: 0.5em}
 
   while( $row = $res->fetchArray() ) {
     $score = ($row['up'] - $row['down']);
-    echo "<li>";
+    echo "<li><a class=bmark name=item" . $row['id'] ." />.</a>";
     echo "<span style=color:rgba(0,0,0," . ( (100 - $score) / 100) ."); class=score>" . $score . " <small>pts</small></span>";
-    echo "<a name=item" . $row['id'] . " target=_blank href=" . $row['url'] . "><img src=img/" . md5($row['url']) . "_tn.jpg></a>";
+    echo "<a target=_blank href=" . $row['url'] . "><img src=img/" . md5($row['url']) . "_tn.jpg></a>";
     echo "<span class=title><a target=_blank href=" . $row['url'] . ">" . clean($row['title']) . "</a><span class=url>" . $row['url'] . "</span></span>";
     echo "<div class=vote>";
     echo "<a class=down href=vote.php?dir=down&id=" . $row['id'] .">-1 It's fine</a>";
