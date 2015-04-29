@@ -36,13 +36,18 @@ body{text-align:center;margin:0;padding:0}
 #grey{background:url('subtle_grunge.png')}
 #header{font-family: 'Poiret One', cursive;color:#aaa;font-weight:normal;background:rgba(191,191,191,0.1);padding:1em}
 #header p {color:#aaa;font-size:1.15em}
+.title .url {
+display:block;
+height: 32px; overflow: hidden;}
 .title { 
 border-top: 1px solid rgba(192,192,192,0.6);
 padding: 0.75em 5px 1em;
 line-height:1.5em;
 
 text-align: left;color: #444;display: block;font-size:11px; width: 290px }
-.title a { font-size: 14px; display: block; padding-bottom:0.15em }
+.title a { 
+height: 1em; overflow: hidden;
+font-size: 14px; display: block; padding-bottom:0.15em }
 h1{font-weight:normal;font-size:4em;padding:0;margin:0}
 li {
   overflow: hidden;
@@ -172,7 +177,7 @@ p { margin: 0.5em}
     echo "<li>";
     echo "<span style=color:rgba(0,0,0," . ( (100 - $score) / 100) ."); class=score>" . $score . " <small>pts</small></span>";
     echo "<a name=item" . $row['id'] . " target=_blank href=" . $row['url'] . "><img src=img/" . md5($row['url']) . "_tn.jpg></a>";
-    echo "<span class=title><a target=_blank href=" . $row['url'] . ">" . clean($row['title']) . "</a>" . $row['url'] . "</span>";
+    echo "<span class=title><a target=_blank href=" . $row['url'] . ">" . clean($row['title']) . "</a><span class=url>" . $row['url'] . "</span></span>";
     echo "<div class=vote>";
     echo "<a class=down href=vote.php?dir=down&id=" . $row['id'] .">-1 It's fine</a>";
     echo "<a class=up href=vote.php?dir=up&id=" . $row['id'] .">+1 Unreadable</a>";
