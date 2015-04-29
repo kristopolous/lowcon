@@ -46,7 +46,7 @@ line-height:1.5em;
 
 text-align: left;color: #444;display: block;font-size:11px; width: 290px }
 .title a { 
-height: 1em; overflow: hidden;
+height: 18px; overflow: hidden;
 font-size: 14px; display: block; padding-bottom:0.15em }
 h1{font-weight:normal;font-size:4em;padding:0;margin:0}
 li {
