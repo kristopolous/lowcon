@@ -13,8 +13,31 @@ function clean($str) {
 <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <style>
 body{text-align:center;margin:0;padding:0}
+h1{
+  font-weight:normal;font-size:4em;padding:0;margin:0}
+li {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255,255,255,0.7);
+  list-style: none;
+  text-align: center;
+  padding: 1.25em 0.75em 1em 0.75em;
+  margin: 1em;
+  border: 1px solid rgba(192,192,192,0.7);
+  box-shadow: 0 0 2px 1px rgba(192,192,192,0.5);
+  display: inline-block;
+}
+p { margin: 0.5em}
+input{padding: 0.25em}
+input[type='text']{border: 2px solid rgba(80,80,80,0.5)}
+input[type="submit"]{padding: inherit 2em;}
+form { margin-bottom: 1em}
+form > * { font-size: 140% }
+li img { padding: 0.2em; margin-bottom: 1em }
+ul { text-align: left }
 .bmark {
   position:absolute;
   top: -40px;
@@ -53,25 +76,6 @@ text-align: left;color: #444;display: block;font-size:11px; width: 290px }
 .title a { 
 height: 18px; overflow: hidden;
 font-size: 14px; display: block; padding-bottom:0em;margin-bottom:0.15em; }
-h1{font-weight:normal;font-size:4em;padding:0;margin:0}
-li {
-  position: relative;
-  overflow: hidden;
-  background: rgba(255,255,255,0.7);
-  list-style: none;
-  text-align: center;
-  padding: 1.25em 0.75em 1em 0.75em;
-  margin: 1em;
-  border: 1px solid rgba(192,192,192,0.7);
-  box-shadow: 0 0 2px 1px rgba(192,192,192,0.5);
-  display: inline-block;
-}
-input{padding: 0.25em}
-input[type='text']{border: 2px solid rgba(80,80,80,0.5)}
-input[type="submit"]{padding: inherit 2em;}
-form { margin-bottom: 1em}
-form > * { font-size: 140% }
-li img { padding: 0.2em; margin-bottom: 1em }
 #copyright {
   margin-top: 2em;
   padding-bottom: 0.5em;
@@ -127,7 +131,6 @@ a,#copy{
   opacity: 1;
   transition: opacity 1s linear;
 }
-ul { text-align: left }
 .vote { margin-top: 1em;
   text-align: right;
 }
@@ -146,7 +149,19 @@ a.down:hover { background: rgba(120,120,255,1); color: white}
 a.up { color: #779;font-family: 'Poiret One', cursive}
 a.down { background: #f4f4f4;color:#008}
 #joke { padding:3px; border-radius: 16px;border: 1px solid rgba(0,0,0,100) }
-p { margin: 0.5em}
+@media (max-width: 768px) {
+  ul { margin: 0; padding: 0; }
+  #url-input, #copyright {
+    text-align: center;
+    width: 90%;
+  }
+  #copy {
+    width: 100%
+  }
+  #joke {
+    max-width: 90%;
+  }
+}
 </style>
 <div id='grey'>
 <div id=header>
@@ -168,7 +183,7 @@ p { margin: 0.5em}
 </div>
 
 <form method='post' action="addoffender.php">
-  <input type='text' size=40 name="url" placeholder="ex: http://impossible-to-read-cool-kid-site.ly">
+  <input id="url-input" type='text' size=40 name="url" placeholder="ex: http://impossible-to-read-cool-kid-site.ly">
   <input type="submit" value="Add Offender">
 </form>
 
