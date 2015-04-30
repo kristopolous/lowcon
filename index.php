@@ -29,7 +29,7 @@ h1{
   font-weight:normal;
   font-size:4em;
   padding:0;
-  margin:0
+  margin:0;
 }
 li {
   position: relative;
@@ -49,7 +49,10 @@ input[type='text']{border: 2px solid rgba(80,80,80,0.5)}
 input[type="submit"]{padding: inherit 2em;}
 form { margin-bottom: 1em}
 form > * { font-size: 140% }
-li img { padding: 0.2em; margin-bottom: 1em }
+li img { 
+  padding: 0.2em; 
+  margin-bottom: 1em; 
+}
 ul { text-align: left }
 a, a:visited { color: darkblue; text-decoration: none }
 a:hover { text-decoration: underline;color:blue }
@@ -93,8 +96,15 @@ a,#copy{
 }
 #header{
   font-family: 'Poiret One', cursive;
-  color:#aaa;font-weight:normal;background:rgba(191,191,191,0.1);padding:1em}
-#header p {color:#aaa;font-size:1.15em}
+  color:#aaa;
+  font-weight:normal;
+  background:rgba(191,191,191,0.1);
+  padding:1em;
+}
+#header p {
+  color:#aaa;
+  font-size:1.15em
+}
 .title .url {
   display:block;
   height: 32px; 
@@ -163,7 +173,8 @@ a,#copy{
   opacity: 1;
   transition: opacity 1s linear;
 }
-.vote { margin-top: 1em;
+.vote { 
+  margin-top: 1em;
   text-align: right;
 }
 .vote a { 
@@ -180,7 +191,11 @@ a.up:hover {color: #44a; text-decoration: underline;}
 a.down:hover { background: rgba(120,120,255,1); color: white}
 a.up { color: #779;font-family: 'Poiret One', cursive}
 a.down { background: #f4f4f4;color:#008}
-#joke { padding:3px; border-radius: 16px;border: 1px solid rgba(0,0,0,100) }
+#joke { 
+  padding:3px; 
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,100); 
+}
 
 @media (max-width: 768px) {
   h1 { font-size: 2.75em }
@@ -208,7 +223,7 @@ a.down { background: #f4f4f4;color:#008}
     <div id="message"></div>
   </div>
   <div id="copy">
-    <p>Many sites use colors and ridiculously skinny fonts which make their content quite difficult to read on a variety of devices.</p>
+    <p>Some sites use colors and ridiculously skinny fonts which make their content quite difficult to read on a variety of devices.</p>
     <p>This has gone on too long.</p>
     <p>Expose low-contrast impossible to read sites.</p>
     <p>Here's a nickel kid. Get <a href="guide.html">yourself a better website</a>.</p>
@@ -231,7 +246,7 @@ a.down { background: #f4f4f4;color:#008}
     $score = ($row['up'] - $row['down']);
     echo "<li><a class='bmark' name='item" . $row['id'] ."' />.</a>";
     echo "<span style='color:rgba(0,0,0," . ( (100 - $score) / 100) .")' class='score'>" . $score . " <small>pts</small></span>";
-    echo "<a target='_blank' href='" . $row['url'] . "'><img src=img/" . md5($row['url']) . "_tn.jpg></a>";
+    echo "<a target='_blank' href='" . $row['url'] . "'><img src='img/" . md5($row['url']) . "_tn.jpg'></a>";
     echo "<span class='title'><a target='_blank' href='" . $row['url'] . "'>" . clean($row['title']) . "</a><span class='url'>" . $row['url'] . "</span></span>";
     echo "<div class='vote'>";
     echo "<a rel='nofollow' class='down' href='vote.php?dir=down&id=" . $row['id'] ."'>-1 It's fine</a>";
