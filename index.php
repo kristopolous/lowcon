@@ -198,7 +198,7 @@ a.down { background: #f4f4f4;color:#008}
 }
 </style>
 <div id='grey'>
-<div id=header>
+<div id='header'>
   <h1>Low Contrast Offenders</h1>
   <p>who the hell can read this shit</p>
 </div>
@@ -229,13 +229,13 @@ a.down { background: #f4f4f4;color:#008}
 
   while( $row = $res->fetchArray() ) {
     $score = ($row['up'] - $row['down']);
-    echo "<li><a class=bmark name=item" . $row['id'] ." />.</a>";
-    echo "<span style=color:rgba(0,0,0," . ( (100 - $score) / 100) ."); class=score>" . $score . " <small>pts</small></span>";
-    echo "<a target=_blank href='" . $row['url'] . "'><img src=img/" . md5($row['url']) . "_tn.jpg></a>";
-    echo "<span class=title><a target=_blank href='" . $row['url'] . "'>" . clean($row['title']) . "</a><span class=url>" . $row['url'] . "</span></span>";
-    echo "<div class=vote>";
-    echo "<a rel='nofollow' class=down href='vote.php?dir=down&id=" . $row['id'] ."'>-1 It's fine</a>";
-    echo "<a rel='nofollow' class=up href='vote.php?dir=up&id=" . $row['id'] ."'>+1 Unreadable</a>";
+    echo "<li><a class='bmark' name='item" . $row['id'] ."' />.</a>";
+    echo "<span style='color:rgba(0,0,0," . ( (100 - $score) / 100) .")' class='score'>" . $score . " <small>pts</small></span>";
+    echo "<a target='_blank' href='" . $row['url'] . "'><img src=img/" . md5($row['url']) . "_tn.jpg></a>";
+    echo "<span class='title'><a target='_blank' href='" . $row['url'] . "'>" . clean($row['title']) . "</a><span class='url'>" . $row['url'] . "</span></span>";
+    echo "<div class='vote'>";
+    echo "<a rel='nofollow' class='down' href='vote.php?dir=down&id=" . $row['id'] ."'>-1 It's fine</a>";
+    echo "<a rel='nofollow' class='up' href='vote.php?dir=up&id=" . $row['id'] ."'>+1 Unreadable</a>";
     if($isAdmin) {
       echo "<a href=drop.php?id=" . $row['id'] .">X</a>";
     }
