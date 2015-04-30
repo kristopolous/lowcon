@@ -38,6 +38,11 @@ form { margin-bottom: 1em}
 form > * { font-size: 140% }
 li img { padding: 0.2em; margin-bottom: 1em }
 ul { text-align: left }
+a, a:visited { color: darkblue; text-decoration: none }
+a:hover { text-decoration: underline;color:blue }
+a,#copy{
+  font-family: 'Droid Sans', sans-serif;
+}
 .bmark {
   position:absolute;
   top: -40px;
@@ -65,17 +70,22 @@ ul { text-align: left }
 #header{font-family: 'Poiret One', cursive;color:#aaa;font-weight:normal;background:rgba(191,191,191,0.1);padding:1em}
 #header p {color:#aaa;font-size:1.15em}
 .title .url {
-display:block;
-height: 32px; overflow: hidden;}
+  display:block;
+  height: 32px; 
+  overflow: hidden;
+}
 .title { 
-border-top: 1px solid rgba(192,192,192,0.6);
-padding: 0.75em 5px 1em;
-line-height:1.5em;
-
-text-align: left;color: #444;display: block;font-size:11px; width: 290px }
+  border-top: 1px solid rgba(192,192,192,0.6);
+  padding: 0.75em 5px 1em;
+  line-height:1.5em;
+  text-align: left;
+  color: #444;
+  display: block;font-size:11px; width: 290px }
 .title a { 
-height: 18px; overflow: hidden;
-font-size: 14px; display: block; padding-bottom:0em;margin-bottom:0.15em; }
+  height: 17px; 
+  overflow: hidden;
+  font-size: 14px; display: block; padding-bottom:0em;margin-bottom:0.18em; }
+
 #copyright {
   margin-top: 2em;
   padding-bottom: 0.5em;
@@ -86,11 +96,6 @@ font-size: 14px; display: block; padding-bottom:0em;margin-bottom:0.15em; }
   background: rgba(255,255,255,0.5);
   padding: 0.5em;
   margin-bottom: 1.5em;
-}
-a, a:visited { color: darkblue; text-decoration: none }
-a:hover { text-decoration: underline;color:blue }
-a,#copy{
-  font-family: 'Droid Sans', sans-serif;
 }
 @font-face {
   font-family: "Comic Sans";
