@@ -15,7 +15,16 @@ function clean($str) {
 <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <style>
-body{text-align:center;margin:0;padding:0}
+@font-face {
+  font-family: "Comic Sans";
+  src: url('comic-sans.ttf') format('truetype'),
+    url('comic-sans.woff') format('woff');
+}
+body{
+  text-align:center;
+  margin:0;
+  padding:0;
+}
 h1{
   font-weight:normal;
   font-size:4em;
@@ -68,10 +77,23 @@ a,#copy{
   box-shadow: inset 0 0 4px 4px rgba(250,250,250,0.5);
   font-size: 150%;
 }
-.score small { font-size: 80%; display:inline-block; font-weight: normal; opacity: 0.8} 
-#fuck{position:absolute;top:0;right:0}
-#grey{background:url('subtle_grunge.png')}
-#header{font-family: 'Poiret One', cursive;color:#aaa;font-weight:normal;background:rgba(191,191,191,0.1);padding:1em}
+.score small { 
+  font-size: 80%; 
+  display:inline-block; 
+  font-weight: normal; 
+  opacity: 0.8;
+} 
+#fuck{
+  position:absolute;
+  top:0;
+  right:0;
+}
+#grey{
+  background:url('subtle_grunge.png');
+}
+#header{
+  font-family: 'Poiret One', cursive;
+  color:#aaa;font-weight:normal;background:rgba(191,191,191,0.1);padding:1em}
 #header p {color:#aaa;font-size:1.15em}
 .title .url {
   display:block;
@@ -84,12 +106,18 @@ a,#copy{
   line-height:1.5em;
   text-align: left;
   color: #444;
-  display: block;font-size:11px; width: 290px }
+  display: block;
+  font-size:11px; 
+  width: 290px;
+}
 .title a { 
   height: 17px; 
   overflow: hidden;
-  font-size: 14px; display: block; padding-bottom:0em;margin-bottom:0.18em; }
-
+  font-size: 14px; 
+  display: block; 
+  padding-bottom:0em;
+  margin-bottom:0.18em; 
+}
 #copyright {
   margin-top: 2em;
   padding-bottom: 0.5em;
@@ -100,11 +128,6 @@ a,#copy{
   background: rgba(255,255,255,0.5);
   padding: 0.5em;
   margin-bottom: 1.5em;
-}
-@font-face {
-  font-family: "Comic Sans";
-  src: url('comic-sans.ttf') format('truetype'),
-    url('comic-sans.woff') format('woff');
 }
 #message-container { 
   vertical-align: top;
@@ -158,6 +181,7 @@ a.down:hover { background: rgba(120,120,255,1); color: white}
 a.up { color: #779;font-family: 'Poiret One', cursive}
 a.down { background: #f4f4f4;color:#008}
 #joke { padding:3px; border-radius: 16px;border: 1px solid rgba(0,0,0,100) }
+
 @media (max-width: 768px) {
   h1 { font-size: 2.75em }
   ul { margin: 0; padding: 0; }
