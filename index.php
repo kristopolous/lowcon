@@ -17,7 +17,11 @@ function clean($str) {
 <style>
 body{text-align:center;margin:0;padding:0}
 h1{
-  font-weight:normal;font-size:4em;padding:0;margin:0}
+  font-weight:normal;
+  font-size:4em;
+  padding:0;
+  margin:0
+}
 li {
   position: relative;
   overflow: hidden;
@@ -155,6 +159,7 @@ a.up { color: #779;font-family: 'Poiret One', cursive}
 a.down { background: #f4f4f4;color:#008}
 #joke { padding:3px; border-radius: 16px;border: 1px solid rgba(0,0,0,100) }
 @media (max-width: 768px) {
+  h1 { font-size: 2.75em }
   ul { margin: 0; padding: 0; }
   #url-input, #copyright {
     text-align: center;
