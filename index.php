@@ -73,12 +73,13 @@ a,#copy{
   padding: 1em 2.5em 0.25em 1.5em;
   color: rgb(0,0,0);
   background: rgba(235,230,235,0.8);
-    -ms-transform: rotate(-40deg); /* IE 9 */
-    -webkit-transform: rotate(-40deg); /* Safari */
-    transform: rotate(-40deg);
+  -ms-transform: rotate(-40deg); /* IE 9 */
+  -webkit-transform: rotate(-40deg); /* Safari */
+  transform: rotate(-40deg);
   text-shadow: 0 0 4px rgba(225,225,255,0.8);
   box-shadow: inset 0 0 4px 4px rgba(250,250,250,0.5);
   font-size: 150%;
+  z-index: 100;
 }
 .score small { 
   font-size: 80%; 
@@ -268,7 +269,9 @@ var messages = [
   "i'm a c programmer - except in the classes i got d's in.",
   "i don't use computers. i type my css on postcards and mail it off to the datacenter.",
   "the bike i came in is the last thing you'll see that's fixed for the next 2 hours.",
+  "i like it simple: redis + express + rails + angular + nginx + mongo + grunt + jasm...",
   "i've taken javascript off my resume. it's coffescript all the way",
+  "sometimes i put my sim card in my blackberry just to listen to my maroon5 ringtone",
   "man that iphone is really ancient. what is it? like 2 months old?",
   "i have to stop coding now because i've sobered up.",
   "turning on adblock on my site is like 301'ing to about:blank.",
@@ -282,7 +285,7 @@ var messages = [
   "can't code so i call myself a ux engineer",
   "look at me, im so cool. my sass generates less which generates lots of bugs.",
   "I use this font for irony even though it was designed for low resolution."
-], ix = 0, iy = 7;
+], ix = Math.floor(Math.random() * messages.length), iy = 7;
 
 setInterval(function(){
   var m = document.getElementById('message');
@@ -296,7 +299,6 @@ setInterval(function(){
 
   iy ++;
   iy %= 12;
-
 }, 1 * 1000);  
 
 </script>
