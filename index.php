@@ -13,7 +13,27 @@ function clean($str) {
 <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="Chris the hipster McKenzie">
+<meta name="description" content="a good day is a PBR, a MBP, and #BBB on #AAA. i have to stop coding now because i've sobered up." />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@githater" />
+<meta name="twitter:description" content="a good day is a PBR, a MBP, and #BBB on #AAA. i have to stop coding now because i've sobered up." />
+<!--
+<meta name="twitter:image:src" content="http://indycast.net/images/twit-image.jpg" />
+<meta property="og:image" content="http://indycast.net/og-image.php" />
+-->
+<meta name="twitter:site" content="@githater" />
+<meta name="twitter:title" content="a good day is a PBR, a MBP, and #BBB on #AAA. i have to stop coding now because i've sobered up." />
+<meta name="twitter:url" content="http://unreadable.website" />
+<meta property="og:description" content="a good day is a PBR, a MBP, and #BBB on #AAA. i have to stop coding now because i've sobered up." />
+<meta property="og:site_name" content="Unreadable Website" />
+<meta property="og:title" content="The Worst Websites On The Whole Fucking Internet, in Pictures." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://unreadable.website" />
 <style>
 @font-face {
   font-family: "Comic Sans";
@@ -276,7 +296,7 @@ var messages = [
   "i have to stop coding now because i've sobered up.",
   "turning on adblock on my site is like 301'ing to about:blank.",
   "we haven't gotten any complaints. i told you that feedback feature doesn't need to work.",
-  "A good day is a PBR, a MBP, and #BBB on #AAA.",
+  "a good day is a PBR, a MBP, and #BBB on #AAA.",
   "i utilize a process known as TDD; \"Takes Days n' Days\" to do shit.",
   "On saturdays I like to sit at home and go through my collection of DNS records.",
   "I charge $100/hr for results that will lose you $50,000. guaranteed.",
