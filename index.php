@@ -325,6 +325,7 @@ var messages = [
   "where's your general-purpose tool-building factory factory factory?",
   "i like it simple: redis + express + rails + angular + nginx + mongo + grunt + jasm...",
   "i've taken javascript off my resume. it's coffescript all the way",
+  "i just a/b tested a drip campaign and made a bingo card app",
   "sometimes i put my sim card in my blackberry just to listen to my maroon5 ringtone",
   "man that iphone is really ancient. what is it? like 2 months old?",
   "i have to stop coding now because i've sobered up.",
