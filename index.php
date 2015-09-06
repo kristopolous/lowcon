@@ -278,8 +278,8 @@ a.selected:hover {
 
 <form method='post' action="addoffender.php">
   <span id='sort'>
-    <a class='<?= $sort == 'new-shit' ? 'selected' : '' ?>' href='/?sort=new-shit'><?= sort_inject('new-shit')?> Recent</a> 
-    <a class='<?= $sort == 'fucking-terrible' ? 'selected' : '' ?>' href='/?sort=fucking-terrible'><?= sort_inject('fucking-terrible')?> Worst</a>
+    <a name='sort' class='<?= $sort == 'new-shit' ? 'selected' : '' ?>' href='/?sort=new-shit#sort'><?= sort_inject('new-shit')?> Recent</a> 
+    <a class='<?= $sort == 'fucking-terrible' ? 'selected' : '' ?>' href='/?sort=fucking-terrible#sort'><?= sort_inject('fucking-terrible')?> Worst</a>
   </span>
   <input id="url-input" type='text' size=40 name="url" placeholder="ex: http://impossible-to-read-cool-kid-site.ly">
   <input type="submit" value="Add Offender">
