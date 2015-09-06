@@ -1,0 +1,5 @@
+Options +FollowSymLinks
+RewriteEngine on
+
+RewriteRule /shitty-fucking-website/(.*)$ /show_site.php?id=$1.php [L]
+
