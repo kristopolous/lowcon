@@ -1,0 +1,9 @@
+article {
+  font-family: Times;
+  color: black;
+}
+a { 
+  color: darkblue;
+  font-family: Times;
+  text-decoration: underline;
+}
