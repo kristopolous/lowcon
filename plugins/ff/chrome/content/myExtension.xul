@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://myExtension/skin/myExtension.css" type="text/css"?>
+<overlay id="myExtension-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script type="application/x-javascript" src="chrome://myExtension/content/myExtension.js" />
+	<toolbox id="navigator-toolbox">
+		<toolbar id="myExtension-toolbar" context="toolbar-context-menu" accesskey="d" class="chromeclass-toolbar" toolbarname="Your Site Toolbar" hidden="false" persist="hidden">
+			
+			<!-- Home -->
+			<toolbarbutton label="Your Site" id="myExtension-button-home" accesskey="d" image="chrome://myExtension/skin/logo.png" oncommand="me_loadURL('http://yourdomain.tld');" tooltiptext="Click here to go to the Your Site homepage." />
+			
+			<!-- Twitter -->
+			<toolbarbutton label="Twitter" id="myExtension-button-twitter" accesskey="t" image="chrome://myExtension/skin/twitter.png" oncommand="me_loadURL('http://twitter.com/yourtwitterhandle');" tooltiptext="Follow the blog on Twitter!" />
+			
+			<!-- (sep) -->
+			<toolbarseparator />
+			
+			<!-- Search -->
+			<toolbaritem id="myExtension-search-toolbar-item" persist="width">
+				 <textbox id="myExtension-search-toolbar-box" value="Search..." flex="1" minwidth="100" width="150" onfocus="me_focus(true);" onblur="me_focus(false);" onkeypress="me_keypress(event);" />
+			</toolbaritem>
+			<toolbaritem flex="0">
+				 <toolbarbutton id="myExtension-search-toolbar-button" label="Blog Search" tooltiptext="Search the Your Site" image="chrome://myExtension/skin/search.png" oncommand="me_searchBlog(event);event.stopPropagation();" />
+			</toolbaritem>
+			
+		</toolbar>
+	</toolbox>
+</overlay>

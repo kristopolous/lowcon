@@ -1,0 +1,5 @@
+content myExtension jar:chrome/myExtension.jar!/content/
+overlay chrome://browser/content/browser.xul chrome://myExtension/content/myExtension.xul
+skin myExtension classic/1.0 jar:chrome/myExtension.jar!/skin/
+
+
