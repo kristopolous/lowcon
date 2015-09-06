@@ -322,6 +322,7 @@ var messages = [
   "i'm a c programmer - except in the classes i got d's in.",
   "i don't use computers. i type my css on postcards and mail it off to the datacenter.",
   "the bike i came in is the last thing you'll see that's fixed for the next 2 hours.",
+  "where's your general-purpose tool-building factory factory factory?",
   "i like it simple: redis + express + rails + angular + nginx + mongo + grunt + jasm...",
   "i've taken javascript off my resume. it's coffescript all the way",
   "sometimes i put my sim card in my blackberry just to listen to my maroon5 ringtone",
