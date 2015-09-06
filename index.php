@@ -1,5 +1,6 @@
 <?php
 $isAdmin = isset($_GET['admin']);
+$sort = empty($_GET['sort']) ? 'fucking-terrible' : $_GET['sort'];
 
 function clean($str) {
   if(strlen($str) > 77) {
@@ -7,12 +8,21 @@ function clean($str) {
   } 
   return $str;
 }
+function sort_inject($what) {
+  global $sort;
+  if($sort == $what) {
+    return '<i class="fa fa-sort-amount-desc"></i>';
+  }
+  return '';
+}
+
 ?>
 <!doctype html>
 <title>The Worst Websites On The Whole Fucking Internet, in Pictures.</title>
 <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Style-Type" content="text/css" />
@@ -218,6 +228,20 @@ a.down { background: #f4f4f4;color:#008}
   border: 1px solid rgba(0,0,0,100); 
 }
 
+#sort a {
+  padding: 0.5em 1em;
+  border-radius: 1em;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+a.selected {
+  background: blue;
+  cursor: default;
+  color: white;
+}
+a.selected:hover {
+  text-decoration: none;
+}
 @media (max-width: 768px) {
   h1 { font-size: 2.75em }
   ul { margin: 0; padding: 0; }
@@ -253,6 +277,10 @@ a.down { background: #f4f4f4;color:#008}
 </div>
 
 <form method='post' action="addoffender.php">
+  <span id='sort'>
+    <a class='<?= $sort == 'new-shit' ? 'selected' : '' ?>' href='/?sort=new-shit'><?= sort_inject('new-shit')?> Recent</a> 
+    <a class='<?= $sort == 'fucking-terrible' ? 'selected' : '' ?>' href='/?sort=fucking-terrible'><?= sort_inject('fucking-terrible')?> Worst</a>
+  </span>
   <input id="url-input" type='text' size=40 name="url" placeholder="ex: http://impossible-to-read-cool-kid-site.ly">
   <input type="submit" value="Add Offender">
 </form>
@@ -261,7 +289,12 @@ a.down { background: #f4f4f4;color:#008}
 <?php
 
   include('db.php');
-  $res = $db->query("select * from sites where up - down > -5 order by up - down desc limit 50");
+  if ($sort == 'new-shit') {
+    $order = 'id desc';
+  } else {
+    $order = 'up - down desc';
+  }
+  $res = $db->query("select * from sites where up - down > -5 order by $order limit 50");
 
   while( $row = $res->fetchArray() ) {
     $score = ($row['up'] - $row['down']);
