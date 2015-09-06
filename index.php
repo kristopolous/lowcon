@@ -47,8 +47,8 @@ function sort_inject($what) {
 <style>
 @font-face {
   font-family: "Comic Sans";
-  src: url('comic-sans.ttf') format('truetype'),
-    url('comic-sans.woff') format('woff');
+  src: url('/fonts/comic-sans.ttf') format('truetype'),
+    url('/fonts/comic-sans.woff') format('woff');
 }
 body{
   text-align:center;
