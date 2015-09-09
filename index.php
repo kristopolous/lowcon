@@ -268,10 +268,10 @@ a.selected:hover {
     <div id="message"></div>
   </div>
   <div id="copy">
-    <p>Some sites use colors and ridiculously skinny fonts which make their content quite difficult to read on a variety of devices.</p>
-    <p>This has gone on too long.</p>
+    <p>Some people decided to make their content completely unreadable.</p>
     <p>Expose low-contrast impossible to read sites.</p>
-    <p>Here's a nickel kid. Get <a href="guide.html">yourself a better website</a>.</p>
+    <p>Here's a nickel kid. Get yourself <a href="guide.html">a better website</a>.</p>
+    <p><b>New:</b> I'm working on something to help read these. The quest for <a href="higher_contrast.html">higher contrast</a>.
   </div>
 </div>
 </div>

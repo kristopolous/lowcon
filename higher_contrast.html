@@ -1,0 +1,20 @@
+<h1>The Quest For a Legible Web</h1>
+
+<p>There's a few high contrast plugins for browsers. They don't work well.</p>
+<ul>
+  <li>Some use the CSS3 contrast property to try to "generically" fix the problem ... this leads to improperly aliased fonts that are equally hard to read.</li>
+  <li>Others try to apply their magical rules everywhere, which is not what we want.</li>
+  <li>Most assume way too much about websites and end up worsening the problem.</li>
+</ul>
+
+<p>What I've found is that for the most part, resetting the fonts and color to black works.  There's a few wacky sites with bizarre colored backgrounds, but those are rare.  It's mostly super light grey on almost-but not quite so light grey with some font where 50% of the characters are subpixeled to a point of not being rendered.</p>
+
+<p>So let's make the text black and the font times.</p>
+
+<h2>The non-plugin version</h2>
+
+<p>Plugins are way too hard.  Really what there needs to be is a button that runs this.  For now, just copy and paste this into your console when you need it:</p>
+
+<code>document.body.appendChild(document.createElement('link')).href='//unreadable.website/unfuckupify.css'</code>
+
+<p>Ah, it makes life so much better. I can read shit.</p>
