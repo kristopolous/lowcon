@@ -1,9 +1,9 @@
-p,li,article {
-  font-family: Times;
-  color: black;
+p,q,blockquote,li,article {
+  font-family: Times !important;
+  color: black !important;
 }
 a { 
-  color: darkblue;
-  font-family: Times;
-  text-decoration: underline;
+  color: darkblue !important;
+  font-family: Times !important;
+  text-decoration: underline !important;
 }
