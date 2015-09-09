@@ -268,10 +268,8 @@ a.selected:hover {
     <div id="message"></div>
   </div>
   <div id="copy">
-    <p>Some people decide to make their content completely unreadable.</p>
-    <p>Expose low-contrast impossible to read sites.</p>
-    <p>Here's a nickel kid. Get yourself <a href="guide.html">a better website</a>.</p>
-    <p><b>New:</b> I'm working on making things legible. The quest for <a href="higher_contrast.html">higher contrast</a>.
+    <p>Some people decide to make their content <a href="guide.html">completely unreadable</a>. Here's a wall of shame for those insufferable things.</p>
+    <p><b>New:</b> I'm working on making things legible, a quest for <a href="higher_contrast.html">higher contrast</a>.
   </div>
 </div>
 </div>
