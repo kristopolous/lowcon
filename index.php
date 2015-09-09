@@ -18,7 +18,7 @@ function sort_inject($what) {
 
 ?>
 <!doctype html>
-<title>The Worst Websites On The Whole Fucking Internet, in Pictures.</title>
+<title>The Worst Websites On The Whole Internet, in Pictures.</title>
 <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
@@ -41,7 +41,7 @@ function sort_inject($what) {
 <meta name="twitter:url" content="http://unreadable.website" />
 <meta property="og:description" content="a good day is a PBR, a MBP, and #BBB on #AAA. i have to stop coding now because i've sobered up." />
 <meta property="og:site_name" content="Unreadable Website" />
-<meta property="og:title" content="The Worst Websites On The Whole Fucking Internet, in Pictures." />
+<meta property="og:title" content="The Worst Websites On The Whole Internet, in Pictures." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://unreadable.website" />
 <style>
@@ -268,10 +268,10 @@ a.selected:hover {
     <div id="message"></div>
   </div>
   <div id="copy">
-    <p>Some people decided to make their content completely unreadable.</p>
+    <p>Some people decide to make their content completely unreadable.</p>
     <p>Expose low-contrast impossible to read sites.</p>
     <p>Here's a nickel kid. Get yourself <a href="guide.html">a better website</a>.</p>
-    <p><b>New:</b> I'm working on something to help read these. The quest for <a href="higher_contrast.html">higher contrast</a>.
+    <p><b>New:</b> I'm working on making things legible. The quest for <a href="higher_contrast.html">higher contrast</a>.
   </div>
 </div>
 </div>
