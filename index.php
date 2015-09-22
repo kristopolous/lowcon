@@ -292,7 +292,7 @@ a.selected:hover {
   } else {
     $order = 'up - down desc';
   }
-  $res = $db->query("select * from sites where up - down > -5 order by $order limit 50");
+  $res = $db->query("select * from sites where up - down > -5 order by $order limit 60");
 
   while( $row = $res->fetchArray() ) {
     $score = ($row['up'] - $row['down']);
@@ -326,7 +326,6 @@ var messages = [
   "it's a series-a b2b run by c-level d-heads",
   "i just a/b tested a drip campaign and made a bingo card app",
   "sometimes i put my sim card in my blackberry just to listen to my maroon5 ringtone",
-  "man that iphone is really ancient. what is it? like 2 months old?",
   "i have to stop coding now because i've sobered up.",
   "turning on adblock on my site is like 301'ing to about:blank.",
   "we haven't gotten any complaints. i told you that feedback feature doesn't need to work.",

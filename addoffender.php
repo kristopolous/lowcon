@@ -42,6 +42,9 @@ if(strpos(strtolower($raw_url), 'http') === false) {
   $raw_url = 'http://' . $raw_url;
 }
 
+echo "<pre>Ok I'm doing it ... just wait.";
+flush();
+
 $url = $db->escapeString($raw_url);
 $res = $db->query('select * from sites where url="' . $url . '"');
 $row = $res->fetchArray();
@@ -54,7 +57,13 @@ if(!$row) {
   } else {
     $display = ":10";
   }
+  echo "I have to start a browser and everything ... come on now.";
+  flush();
+
   exec('DISPLAY='.$display.' cutycapt --min-height=768 --min-width=1024 --url=' . $site . ' --out=img/' . $md5 . '.png');
+
+  echo "Ok now I need to resize the screen shot...";
+  flush();
 
   // only continue if the image was successfully made.
   if(file_exists('img/' . $md5 . '.png')) {
@@ -73,5 +82,7 @@ if(!$row) {
     die;
   }
 }
-header('Location: ' . $_SERVER['HTTP_REFERER']);
+echo "And now you go back to where you came from! farewell"; 
+echo "<script>history.go(-1);</script>";
+flush();
 
