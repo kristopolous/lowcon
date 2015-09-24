@@ -1,5 +1,19 @@
 <?php
 include('db.php');
+ini_set('output_buffering', 'off');
+while (@ob_end_flush());
+ini_set('implicit_flush', true);
+ob_implicit_flush(true);
+header('Cache-Control: no-cache'); // recommended to prevent caching of event data.
+ 
+for($i = 0; $i < 1000; $i++) {
+  echo ' ';
+}
+         
+function report($what) {
+  echo '<h3>' .$what. '</h3>';
+  flush();
+}
 
 function get_title($url) {
   static $uaList = Array(
@@ -42,8 +56,7 @@ if(strpos(strtolower($raw_url), 'http') === false) {
   $raw_url = 'http://' . $raw_url;
 }
 
-echo "<pre>Ok I'm doing it ... just wait.";
-flush();
+report("Ok I'm doing it ... just wait");
 
 $url = $db->escapeString($raw_url);
 $res = $db->query('select * from sites where url="' . $url . '"');
@@ -57,13 +70,11 @@ if(!$row) {
   } else {
     $display = ":10";
   }
-  echo "I have to start a browser and everything ... come on now.";
-  flush();
+  report("I have to start a browser and everything ... come on now.");
 
   exec('DISPLAY='.$display.' cutycapt --min-height=768 --min-width=1024 --url=' . $site . ' --out=img/' . $md5 . '.png');
 
-  echo "Ok now I need to resize the screen shot...";
-  flush();
+  report("Ok now I need to resize the screen shot...");
 
   // only continue if the image was successfully made.
   if(file_exists('img/' . $md5 . '.png')) {
@@ -78,11 +89,11 @@ if(!$row) {
       exit(0);
     }
   } else {
-    echo "Oh shit ... couldn't get screen shot.";
+    report("Oh shit ... couldn't get screen shot.");
     die;
   }
 }
-echo "And now you go back to where you came from! farewell"; 
+report("And now you go back to where you came from! farewell"); 
+sleep(1);
 echo "<script>document.location='/?what=new-stuff-thats-what'</script>";
 flush();
-
