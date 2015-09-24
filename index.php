@@ -1,5 +1,6 @@
 <?php
 $isAdmin = isset($_GET['admin']);
+$isNew = isset($_GET['what']);
 $sort = empty($_GET['sort']) ? 'fucking-terrible' : $_GET['sort'];
 
 function clean($str) {
@@ -256,7 +257,23 @@ a.selected:hover {
     max-width: 90%;
   }
 }
+#thanks {
+  background: rgba(40,40,40,0.8);
+  color: rgb(40,40,50);
+  font-weight: bold;
+  z-index: 100;
+  font-size:24px;
+  width: 100%;
+  font-family: sans-serif;
+  padding: 1em;
+  box-shadow: inset -2px -2px 2px 2px rgba(20,20,20,0.9);
+  text-shadow: 1px 2px rgba(100,100,100,0.9);
+  display: <? if ($isNew) { echo 'block'; } else { echo 'none'; } ?>;
+  position: relative;
+}
 </style>
+<div id='thanks'>
+Ok, you did your part. Thanks for the add!</div>
 <div id='grey'>
 <div id='header'>
   <h1>Low Contrast Offenders</h1>

@@ -83,6 +83,6 @@ if(!$row) {
   }
 }
 echo "And now you go back to where you came from! farewell"; 
-echo "<script>history.go(-1);</script>";
+echo "<script>document.location='/?what=new-stuff-thats-what'</script>";
 flush();
 
