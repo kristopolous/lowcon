@@ -95,5 +95,5 @@ if(!$row) {
 }
 report("And now you go back to where you came from! farewell"); 
 sleep(1);
-echo "<script>document.location='/?what=new-stuff-thats-what'</script>";
+echo "<script>document.location='/?what=new-stuff-thats-what&sort=new-shit'</script>";
 flush();
