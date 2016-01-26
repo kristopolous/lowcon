@@ -314,7 +314,7 @@ Ok, you did your part. Thanks for the add!</div>
   while( $row = $res->fetchArray() ) {
     $score = ($row['up'] - $row['down']);
     echo "<li><a class='bmark' name='item" . $row['id'] ."' />.</a>";
-    echo "<span style='color:rgba(0,0,0," . ( (100 - $score) / 100) .")' class='score'>" . $score . " <small>pts</small></span>";
+    echo "<span style='color:rgba(0,0,0," . ( (100 - $score) / 100) .")' class='score'>" . $score . " <small>pt" . ($score == 1 ? "" : "s") . "</small></span>";
     echo "<a target='_blank' href='" . $row['url'] . "'><img src='img/" . md5($row['url']) . "_tn.jpg'></a>";
     echo "<span class='title'><a target='_blank' href='" . $row['url'] . "'>" . clean($row['title']) . "</a><span class='url'>" . $row['url'] . "</span></span>";
     echo "<div class='vote'>";
