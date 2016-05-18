@@ -79,6 +79,10 @@ if(!$row) {
   // only continue if the image was successfully made.
   if(file_exists('img/' . $md5 . '.png')) {
     exec('convert img/' . $md5 . '.png -resize 300x -crop 300x320+0+0 -resize 300x img/' . $md5 . '_tn.jpg');
+
+    // remove the big file
+    unlink('img/' . $md5 . '.png');
+
     $title = $db->escapeString(get_title($url));
     $db->exec('
       insert into sites (url, title, up, down, view) 
