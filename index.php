@@ -348,13 +348,13 @@ var messages = [
   "we haven't gotten any complaints. i told you that feedback feature doesn't need to work.",
   "a good day is a PBR, a MBP, and #BBB on #AAA.",
   "i utilize a process known as TDD; \"Takes Days n' Days\" to do shit.",
-  "On saturdays I like to sit at home and go through my collection of DNS records.",
-  "I charge $100/hr for results that will lose you $50,000. guaranteed.",
+  "On saturdays i like to sit at home and go through my collection of DNS records.",
+  "i charge $100/hr for results that will lose you $50,000. guaranteed.",
   "Of course the site needs 30MB of dependencies. Why is this even a question?",
   "my mobile stategy is to move around companies a lot and not fix things.",
   "can't code so i call myself a ux engineer",
   "look at me, im so cool. my sass generates less which generates lots of bugs.",
-  "I use this font for irony even though it was designed for low resolution."
+  "i use this font for irony even though it was designed for low resolution."
 ], ix = Math.floor(Math.random() * messages.length), iy = 7;
 
 setInterval(function(){
