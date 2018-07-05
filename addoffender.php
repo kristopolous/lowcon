@@ -64,7 +64,8 @@ $row = $res->fetchArray();
 
 if(!$row) {
   $md5 = md5($url);
-  $site = escapeshellarg($raw_url);
+  $parts = explode('#', $raw_url);
+  $site = escapeshellarg($parts[0]);
   if($_SERVER['HTTP_HOST'] == 'localhost') { 
     $display = ":0";
   } else {
