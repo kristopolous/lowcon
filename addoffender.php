@@ -72,7 +72,9 @@ if(!$row) {
   }
   report("I have to start a browser and everything ... come on now.");
 
-  exec('DISPLAY='.$display.' cutycapt --min-height=768 --min-width=1024 --url=' . $site . ' --out=img/' . $md5 . '.png');
+  $cmd = 'DISPLAY='.$display.' cutycapt --min-height=768 --min-width=1024 --url=' . $site . ' --out=img/' . $md5 . '.png';
+  echo $cmd;
+  exec($cmd);
 
   report("Ok now I need to resize the screen shot...");
 
@@ -84,9 +86,10 @@ if(!$row) {
     unlink('img/' . $md5 . '.png');
 
     $title = $db->escapeString(get_title($url));
-    $db->exec('
-      insert into sites (url, title, up, down, view) 
-      values("' . $url . '", "' . $title . '", 1, 0, 1)');
+    $qstr = 'insert into sites (url, title, up, down, view) 
+      values("' . $url . '", "' . $title . '", 1, 0, 1)';
+    echo $qstr;
+    $db->exec($qstr);
 
     if($db->lastErrorCode() !== 0) {
       echo $db->lastErrorMsg();
