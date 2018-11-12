@@ -15,6 +15,12 @@ function report($what) {
   flush();
 }
 
+function doit($cmd) {
+  exec($cmd, $output, $ret);
+  //echo "<pre>$cmd<br>" . implode('<br>', $output) . '<br>(' . $ret . ')</pre>';
+}
+
+
 function get_title($url) {
   static $uaList = Array(
     'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)',
@@ -73,9 +79,8 @@ if(!$row) {
   }
   report("I have to start a browser and everything ... come on now.");
 
-  $cmd = 'DISPLAY='.$display.' cutycapt --min-height=768 --min-width=1024 --url=' . $site . ' --out=img/' . $md5 . '.png';
-  echo $cmd;
-  exec($cmd);
+  $cmd = 'DISPLAY='.$display.' /usr/bin/cutycapt --min-height=768 --min-width=1024 --url=' . $site . ' --out=img/' . $md5 . '.png';
+  doit($cmd);
 
   report("Ok now I need to resize the screen shot...");
 
@@ -98,6 +103,7 @@ if(!$row) {
     }
   } else {
     report("Oh shit ... couldn't get screen shot.");
+    doit("/var/www/lowcon/startx $display");
     die;
   }
 }
