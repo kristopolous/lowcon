@@ -1,4 +1,5 @@
 #!/bin/bash
+sudo pkill Xtightvnc
 export HOME=/var/www/
 export USER=www-data
 /usr/bin/vncserver $1
