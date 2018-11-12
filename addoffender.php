@@ -107,7 +107,7 @@ if(!$row) {
     $display = ":10";
   }
   report("I have to start a browser and everything ... come on now.");
-  if (!snapit())
+  if (!snapit()) {
     report("Oh shit ... couldn't get screen shot, trying to fix things");
     doit("/var/www/lowcon/startx $display");
     if(!snapit()) {
