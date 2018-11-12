@@ -50,6 +50,35 @@ function get_title($url) {
   return trim($name);
 }
 
+function snapit() {
+  global $display, $site, $md5, $url, $db, $title;
+
+  $cmd = 'DISPLAY='.$display.' /usr/bin/cutycapt --min-height=768 --min-width=1024 --url=' . $site . ' --out=img/' . $md5 . '.png';
+  doit($cmd);
+
+  report("Ok now I need to resize the screen shot...");
+
+  // only continue if the image was successfully made.
+  if(file_exists('img/' . $md5 . '.png')) {
+    exec('convert img/' . $md5 . '.png -resize 300x -crop 300x320+0+0 -resize 300x img/' . $md5 . '_tn.jpg');
+
+    // remove the big file
+    unlink('img/' . $md5 . '.png');
+
+    $title = $db->escapeString(get_title($url));
+    $qstr = 'insert into sites (url, title, up, down, view) 
+      values("' . $url . '", "' . $title . '", 1, 0, 1)';
+    echo $qstr;
+    $db->exec($qstr);
+
+    if($db->lastErrorCode() !== 0) {
+      echo $db->lastErrorMsg();
+      exit(0);
+    }
+    return true;
+  } 
+}
+
 $raw_url = $_POST['url'];
 
 if(empty($raw_url)) {
@@ -78,33 +107,13 @@ if(!$row) {
     $display = ":10";
   }
   report("I have to start a browser and everything ... come on now.");
-
-  $cmd = 'DISPLAY='.$display.' /usr/bin/cutycapt --min-height=768 --min-width=1024 --url=' . $site . ' --out=img/' . $md5 . '.png';
-  doit($cmd);
-
-  report("Ok now I need to resize the screen shot...");
-
-  // only continue if the image was successfully made.
-  if(file_exists('img/' . $md5 . '.png')) {
-    exec('convert img/' . $md5 . '.png -resize 300x -crop 300x320+0+0 -resize 300x img/' . $md5 . '_tn.jpg');
-
-    // remove the big file
-    unlink('img/' . $md5 . '.png');
-
-    $title = $db->escapeString(get_title($url));
-    $qstr = 'insert into sites (url, title, up, down, view) 
-      values("' . $url . '", "' . $title . '", 1, 0, 1)';
-    echo $qstr;
-    $db->exec($qstr);
-
-    if($db->lastErrorCode() !== 0) {
-      echo $db->lastErrorMsg();
-      exit(0);
-    }
-  } else {
-    report("Oh shit ... couldn't get screen shot.");
+  if (!snapit())
+    report("Oh shit ... couldn't get screen shot, trying to fix things");
     doit("/var/www/lowcon/startx $display");
-    die;
+    if(!snapit()) {
+      report("Well that failed ... oh well");
+      die;
+    }
   }
 }
 report("And now you go back to where you came from! farewell"); 
