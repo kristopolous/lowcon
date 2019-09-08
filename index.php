@@ -298,7 +298,7 @@ Ok, you did your part. Thanks for the add!</div>
   <input id="url-input" type='text' size=40 name="url" placeholder="ex: http://impossible-to-read-cool-kid-site.ly">
   <input type="submit" value="Add Offender">
 </form>
-
+<center>
 <ul>
 <?php
 
@@ -327,6 +327,7 @@ Ok, you did your part. Thanks for the add!</div>
   }
 ?>
 </ul>
+</center>
 <div id="copyright">&copy;2014,2015,2016...9999 blahblahblah. bullshit bullshit bullshit. <a target=_blank href="https://github.com/kristopolous/lowcon">source code</a></div>
 <div id="fuck"><a href="https://github.com/kristopolous/lowcon" title="Oh yeah baby, come and git it"><img src="fork.gif"></a></div>
 <script>
